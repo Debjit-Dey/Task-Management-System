@@ -1,0 +1,186 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f34f4f;
+    text-align: center;
+    /* font-size: 100%; */
+
+}
+#heading{
+    text-align: center;
+    font-size: 3rem;
+    /* word-wrap: break-word; */
+
+}
+
+.board {
+    /* display: flex;
+    justify-content: space-between;
+    padding: 20px; */
+
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
+    grid-gap: 30px;
+    /* margin: 20px 60px; */
+    margin: 10% 5%;
+}
+
+.column {
+    background-color: #589b78;
+    /* width: 30%; */
+    border: 1px solid #483434;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+}
+
+.column-header {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+.tasks {
+    min-height: 100px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #ddcccc;
+}
+
+.task-card {
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: background-color 0.2s ease;
+}
+
+.task-card:hover {
+    background-color: #f0f0f0;
+}
+
+.add-task-button {
+    margin-top: 20px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #0e4366;
+    color: #fff;
+    border-radius: 15px;
+    padding: 10px;
+    width: 150px;
+    /* display: inline-block; */
+    margin: 0 auto;
+    font-size: 1.2rem;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.modal h2{
+    font-size: 2.4rem;
+    text-align: center;
+}
+
+.modal-content {
+    background-color: orange;
+    border-radius: 5px;
+    padding: 20px;
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#new-task-title{
+    font-size: 1.5rem;
+    background-color: lightskyblue;
+    /* border-radius: 10%; */
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    margin: 2% 6%;
+    overflow: scroll;
+}
+#task-title{
+    font-size: 1.5rem;
+    background-color: lightskyblue;
+    /* border-radius: 10%; */
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    margin: 2% 6%;
+    overflow-x: scroll;
+    /* word-wrap: break-word; */
+}
+#new-task-description{
+    font-size: 1.5rem;
+    background-color: lightskyblue;
+    border: none;
+    padding: 10px 20px;
+    margin: 2% 6%;
+    overflow-y: scroll;
+
+    
+     
+
+}
+#task-description{
+    font-size: 1.5rem;
+    background-color: lightskyblue;
+    border: none;
+    padding: 10px 20px;
+    margin: 2% 6%;
+    overflow-y: scroll;
+    height: 200px;
+    word-wrap: break-word;
+}
+.task-card{
+overflow: hidden;
+
+}
+.btn{
+    font-size: 1.5rem;
+    min-width: 100px;
+    margin: 2% auto;
+    padding: 5px 10px;
+    border-radius: 20%;
+    background-color: aqua;
+    font-weight: 550;
+}
+#edit-button{
+    font-size: 1.5rem;
+    min-width: 100px;
+    margin: 0% auto;
+    padding: 5px 10px;
+    border-radius: 20%;
+    background-color: aqua;
+    font-weight: 550;
+}
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 2.5rem;
+}
+
+@media only screen and (max-width: 500px){
+    #heading{
+        font-size: 2.1rem;
+    }
+}

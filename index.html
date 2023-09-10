@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="tdl3.css">
+</head>
+<body>
+    <h1 id="heading">Kanban Board Task Management</h1>
+
+    <div class="board">
+        <div class="column" id="todo-column">
+            <div class="column-header">To Do</div>
+            <div class="tasks" id="todo-tasks" ondrop="drop(event, 'todo')" ondragover="allowDrop(event)"></div>
+        </div>
+        <div class="column" id="doing-column">
+            <div class="column-header">Doing</div>
+            <div class="tasks" id="doing-tasks" ondrop="drop(event, 'doing')" ondragover="allowDrop(event)"></div>
+        </div>
+        <div class="column" id="done-column">
+            <div class="column-header">Done</div>
+            <div class="tasks" id="done-tasks" ondrop="drop(event, 'done')" ondragover="allowDrop(event)"></div>
+        </div>
+    </div>
+
+    <div id="task-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeTaskModal()">&times;</span>
+            <h2 id="task-title"></h2>
+            <p id="task-description"></p>
+            <button id="edit-button" onclick="editTask()">Edit</button>
+            <button id="remove-button" class="btn" onclick="removeTask()">Remove</button>
+            <button id="save-button" class="btn" onclick="saveTask()">Save</button>
+        </div>
+    </div>
+
+    <div class="add-task-button" onclick="showAddTaskModal()">+ Add Task</div>
+
+    <div id="add-task-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAddTaskModal()">&times;</span>
+            <h2>Add Task</h2>
+            <input type="text" id="new-task-title" placeholder="Task Title">
+            <textarea rows="4" id="new-task-description" placeholder="Task Description"></textarea>
+            <button id="add" class="btn" onclick="addTask()">Add</button>
+        </div>
+    </div>
+
+    <script src="tdl3.js"></script>
+</body>
+</html>
