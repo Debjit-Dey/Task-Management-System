@@ -14,4 +14,4 @@ mobile devices.
 Here is the live link of the website --- https://debjit-dey.github.io/Task-Management-System/
 
 
-<img>  <\img>
+<img src="Kanban Board - Google Chrome 10-09-2023 06_42_37 PM.png" alt="Girl in a jacket" width="500" height="600">
